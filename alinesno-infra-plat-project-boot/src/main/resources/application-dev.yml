@@ -1,0 +1,28 @@
+server:
+  port: 30302
+
+# spring 配置
+spring:
+  application:
+    name: alinesno-infra-plat-project-boot
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/dev_alinesno_infra_plat_project_v100?serverTimezone=GMT%2B8&zeroDateTimeBehavior=CONVERT_TO_NULL
+    username: root
+    password: adminer
+  data:
+    redis:
+      host: 127.0.0.1
+      port: 6379
+      password: aip@local
+  devtools:
+    restart:
+      enabled: true
+
+alinesno:
+  infra:
+    smart:
+      brain:
+        openapi:
+          host:
+          key:

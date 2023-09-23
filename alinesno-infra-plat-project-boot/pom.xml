@@ -1,0 +1,65 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.alinesno.infra.smart</groupId>
+        <artifactId>alinesno-infra-plat-project-parent</artifactId>
+        <version>${revision}</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <artifactId>alinesno-infra-plat-project-boot</artifactId>
+    <packaging>jar</packaging>
+
+    <properties>
+        <docker.base.images>registry.cn-shenzhen.aliyuncs.com/alinesno-infra-base/openjdk:17.0.2-jdk</docker.base.images>
+        <docker.user>root</docker.user>
+        <kaptcha.version>2.3.3</kaptcha.version>
+    </properties>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.5.13</version>
+        </dependency>
+
+        <!-- 引用服务 -->
+        <dependency>
+            <groupId>com.alinesno.infra.smart</groupId>
+            <artifactId>alinesno-infra-plat-project-domain</artifactId>
+            <version>${revision}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alinesno.infra.smart</groupId>
+            <artifactId>alinesno-infra-plat-project-adapter</artifactId>
+            <version>${revision}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alinesno.infra.smart</groupId>
+            <artifactId>alinesno-infra-plat-project-api</artifactId>
+            <version>${revision}</version>
+        </dependency>
+
+        <!-- 验证码 -->
+        <dependency>
+            <groupId>pro.fessional</groupId>
+            <artifactId>kaptcha</artifactId>
+            <version>${kaptcha.version}</version>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
