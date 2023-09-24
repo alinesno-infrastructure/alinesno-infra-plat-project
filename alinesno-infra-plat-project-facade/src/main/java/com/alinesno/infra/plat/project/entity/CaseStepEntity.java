@@ -14,6 +14,10 @@ import lombok.EqualsAndHashCode;
 @EqualsAndHashCode(callSuper = true)
 @TableName("project_case_step")
 public class CaseStepEntity extends BaseEntity {
+
+    @TableField("case_id")
+    private Long caseId ;
+
     @TableField("version")
     private Integer version;
 
