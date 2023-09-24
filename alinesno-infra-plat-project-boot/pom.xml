@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>com.alinesno.infra.smart</groupId>
+        <groupId>com.alinesno.infra.plat</groupId>
         <artifactId>alinesno-infra-plat-project-parent</artifactId>
         <version>${revision}</version>
         <relativePath>../pom.xml</relativePath>
@@ -29,17 +29,17 @@
 
         <!-- 引用服务 -->
         <dependency>
-            <groupId>com.alinesno.infra.smart</groupId>
+            <groupId>com.alinesno.infra.plat</groupId>
             <artifactId>alinesno-infra-plat-project-domain</artifactId>
             <version>${revision}</version>
         </dependency>
         <dependency>
-            <groupId>com.alinesno.infra.smart</groupId>
+            <groupId>com.alinesno.infra.plat</groupId>
             <artifactId>alinesno-infra-plat-project-adapter</artifactId>
             <version>${revision}</version>
         </dependency>
         <dependency>
-            <groupId>com.alinesno.infra.smart</groupId>
+            <groupId>com.alinesno.infra.plat</groupId>
             <artifactId>alinesno-infra-plat-project-api</artifactId>
             <version>${revision}</version>
         </dependency>

@@ -11,7 +11,7 @@
     </parent>
     <packaging>pom</packaging>
 
-    <groupId>com.alinesno.infra.smart</groupId>
+    <groupId>com.alinesno.infra.plat</groupId>
     <artifactId>alinesno-infra-plat-project-parent</artifactId>
     <version>${revision}</version>
 

@@ -17,5 +17,6 @@
 
 产品设计思路参考：
 
+- [禅道](https://www.zentao.net/) 
 - [jira](https://www.atlassian.com/zh/software/jira)
 - [阿里云效](https://cn.aliyun.com/product/yunxiao?from_alibabacloud=)
