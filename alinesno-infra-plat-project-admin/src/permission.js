@@ -4,6 +4,7 @@ import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
 import { getToken } from '@/utils/auth'
 import { isHttp } from '@/utils/validate'
+import { getParam } from '@/utils/ruoyi'
 import { isRelogin } from '@/utils/request'
 import useUserStore from '@/store/modules/user'
 import useSettingsStore from '@/store/modules/settings'
@@ -11,14 +12,15 @@ import usePermissionStore from '@/store/modules/permission'
 
 NProgress.configure({ showSpinner: false });
 
-const whiteList = ['/login', '/register'];
+const whiteList = ['/login', '/register' , '/sso/login'];
 
 router.beforeEach((to, from, next) => {
   NProgress.start()
+
   if (getToken()) {
     to.meta.title && useSettingsStore().setTitle(to.meta.title)
     /* has token*/
-    if (to.path === '/login') {
+    if (to.path === '/sso/login') {
       next({ path: '/' })
       NProgress.done()
     } else {
@@ -52,10 +54,11 @@ router.beforeEach((to, from, next) => {
       // 在免登录白名单，直接进入
       next()
     } else {
-      next(`/login?redirect=${to.fullPath}`) // 否则全部重定向到登录页
+      next(`/sso/login?redirect=${to.fullPath}`) // 否则全部重定向到登录页
       NProgress.done()
     }
   }
+
 })
 
 router.afterEach(() => {

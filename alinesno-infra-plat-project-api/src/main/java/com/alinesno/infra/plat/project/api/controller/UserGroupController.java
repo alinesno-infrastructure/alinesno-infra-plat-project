@@ -1,6 +1,7 @@
 package com.alinesno.infra.plat.project.api.controller;
 
-import com.alinesno.infra.common.core.rest.BaseController;
+
+import com.alinesno.infra.common.web.adapter.rest.BaseController;
 import com.alinesno.infra.plat.project.entity.UserGroupEntity;
 import com.alinesno.infra.plat.project.service.UserGroupService;
 import org.springframework.web.bind.annotation.RequestMapping;

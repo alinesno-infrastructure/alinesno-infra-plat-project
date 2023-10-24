@@ -1,7 +1,8 @@
 package com.alinesno.infra.plat.project.api.controller;
 
-import com.alinesno.infra.common.core.rest.BaseController;
+
 import com.alinesno.infra.common.facade.response.AjaxResult;
+import com.alinesno.infra.common.web.adapter.rest.BaseController;
 import com.alinesno.infra.plat.project.api.dto.ProductDTO;
 import com.alinesno.infra.plat.project.entity.ProductEntity;
 import com.alinesno.infra.plat.project.service.ProductService;

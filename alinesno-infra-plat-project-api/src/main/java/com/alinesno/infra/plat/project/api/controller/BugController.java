@@ -1,6 +1,6 @@
 package com.alinesno.infra.plat.project.api.controller;
 
-import com.alinesno.infra.common.core.rest.BaseController;
+
 import com.alinesno.infra.common.facade.response.AjaxResult;
 import com.alinesno.infra.plat.project.api.dto.BugDTO;
 import com.alinesno.infra.plat.project.entity.BugEntity;
