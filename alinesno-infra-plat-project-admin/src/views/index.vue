@@ -18,7 +18,7 @@
               </div>
             </div>
             <div class="title-desc">
-              集群状态展示集群资源的概览和详情，您可以查看集群资源的监控数据和用量排行情况。
+                  {{ currentEnvClusterObj.desc }}
             </div>
           </div>
         </div>
@@ -39,14 +39,16 @@
 
 <script setup name="Index">
 
-import OperationWorkspaceCountStaitcs from './operation-workspace/countStatics.vue'
+// import OperationWorkspaceCountStaitcs from './operation-workspace/countStatics.vue'
+
 import OperationWorkspaceApps from './operation-workspace/apps.vue'
 import OperationWorkspaceService from './operation-workspace/service.vue'
 
 const currentEnvClusterObj = ref({
   appName: '任务进度管理服务',
-  clusterName: '项目管理工具，用于任务和问题的管理跟踪服务,思想概念来自Scrum和软件工程'  , 
-  apiServerUrl: 'http://portal.infra.linesno.com'
+  clusterName: '类似工单/任务/笔记等管理,提供基础的管理服务能力'  , 
+  apiServerUrl: 'http://portal.infra.linesno.com' , 
+  desc: '项目管理工具，用于任务和问题的管理跟踪服务,思想概念来自Scrum和软件工程'
 }) 
 
 </script>

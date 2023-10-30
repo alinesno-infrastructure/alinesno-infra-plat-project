@@ -65,6 +65,45 @@ export const constantRoutes = [
         meta: { title: '首页', icon: 'dashboard', affix: true }
       },
 
+      // >>>>>>>>>>>>>>>>>> 项目管理_start >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+      {
+        path: '/project/project/index',
+        component: () => import('@/views/project/project/index'),
+        name: '/project/project/index',
+        meta: { title: '项目管理', icon: 'dashboard', affix: true }
+      },
+      {
+        path: '/project/want/index',
+        component: () => import('@/views/project/want/index'),
+        path: '/project/want/index',
+        meta: { title: '需求管理', icon: 'dashboard', affix: true }
+      },
+      {
+        path: '/project/task/index',
+        component: () => import('@/views/project/task/index'),
+        path: '/project/task/index',
+        meta: { title: '任务管理', icon: 'dashboard', affix: true }
+      },
+      {
+        path: '/project/document/index',
+        component: () => import('@/views/project/document/index'),
+        path: '/project/document/index',
+        meta: { title: '文档管理', icon: 'dashboard', affix: true }
+      },
+      {
+        path: '/project/workflow/index',
+        component: () => import('@/views/project/workflow/index'),
+        path: '/project/workflow/index',
+        meta: { title: '流程管理', icon: 'dashboard', affix: true }
+      },
+      {
+        path: '/project/role/index',
+        component: () => import('@/views/project/role/index'),
+        path: '/project/role/index',
+        meta: { title: '角色管理', icon: 'dashboard', affix: true }
+      },
+      // >>>>>>>>>>>>>>>>>> 项目管理_end >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
       {
         path: '/dashboard/smartService',
         component: () => import('@/views/smartService'),

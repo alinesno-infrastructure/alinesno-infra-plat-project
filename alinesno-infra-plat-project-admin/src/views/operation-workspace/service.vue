@@ -6,7 +6,7 @@
 
         <div class="grid-content">
           <div class="panel-header">
-            <div class="header-title"><i class="fa-solid fa-user-nurse"></i> 接口调用状态</div>
+            <div class="header-title"><i class="fa-solid fa-user-nurse"></i> 任务运行情况</div>
           </div>
           <div class="panel-body acp-height-auto">
         <div class="box-header">
@@ -57,7 +57,7 @@
       <el-col :span="5">
         <div class="grid-content">
           <div class="panel-header">
-            <div class="header-title"><i class="fa-solid fa-user-nurse"></i> 接口调用统计</div>
+            <div class="header-title"><i class="fa-solid fa-user-nurse"></i> 项目情况概览</div>
           </div>
           <div class="panel-body acp-height-auto">
             <ul class="panel-item-text">
@@ -84,39 +84,38 @@ import * as echarts from "echarts";
 const echart = echarts;
 
 const opertionAssets = ref([
-  {id:'1' , title:'运维脚本' , count:45} ,
-  {id:'2' , title:'服务资源' , count:145} ,
-  {id:'3' , title:'持续集成' , count:65} ,
-  {id:'4' , title:'自动配置' , count:85} ,
-  {id:'5' , title:'配置管理' , count:45} ,
-  {id:'6' , title:'安全监控' , count:45} ,
+  {id:'1' , title:'项目总数' , count:45} ,
+  {id:'2' , title:'待处理' , count:145} ,
+  {id:'3' , title:'已完成' , count:65} ,
+  {id:'4' , title:'延时任务' , count:85} ,
+  {id:'5' , title:'未分配' , count:45} ,
 ])
 
 const resources = ref([
         {
-          icon: "fas fa-microchip",
-          title: "CPU core",
+          icon: "fa-solid fa-list-check",
+          title: "任务完成",
           total: "4",
           usage: "0.64",
           usagePre: "12%",
         },
         {
-          icon: "fas fa-memory",
-          title: "内存 Gi",
+          icon: "fa-solid fa-file-word",
+          title: "新增任务",
           total: "7.68",
           usage: "4.81",
           usagePre: "12%",
         },
         {
-          icon: "fas fa-hdd",
-          title: "磁盘 GB",
+          icon: "fa-solid fa-house-tsunami",
+          title: "延迟任务",
           total: "21.57",
           usage: "207.71",
           usagePre: "12%",
         },
         {
-          icon: "fab fa-docker",
-          title: "容器组",
+          icon: "fa-solid fa-recycle",
+          title: "新增需求",
           total: "220",
           usage: "28",
           usagePre: "12%",
@@ -140,13 +139,13 @@ function drawBar2() {
 
       var lineOption = {
         title: {
-          text: "请求延迟(ms)",
+          text: "进度情况(件)",
         },
         tooltip: {
           trigger: "axis",
         },
         legend: {
-          data: ["访问流量", "访问IP"],
+          data: ["昨天进度", "今日进度"],
         },
         grid: {
           x: 40,
@@ -284,7 +283,7 @@ function drawBar2() {
         ],
         series: [
           {
-            name: "访问流量",
+            name: "昨天进度",
             type: "line",
             smooth: true,
             data: [
@@ -308,7 +307,7 @@ function drawBar2() {
             },
           },
           {
-            name: "访问IP",
+            name: "今日进度",
             type: "line",
             smooth: true,
             data: [
