@@ -1,5 +1,7 @@
 package com.alinesno.infra.plat.project.entity;
 
+import com.gitee.sunchenbin.mybatis.actable.annotation.ColumnComment;
+import com.gitee.sunchenbin.mybatis.actable.annotation.ColumnType;
 import com.alinesno.infra.common.facade.mapper.entity.BaseEntity;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
@@ -18,11 +20,15 @@ public class UserGroupEntity extends BaseEntity {
      * 用户账号
      */
     @TableField("account")
+	@ColumnType(length= 50)
+	@ColumnComment("用户账号")
     private String account;
 
     /**
      * 用户组别
      */
     @TableField("group")
+	@ColumnType(length=50)
+	@ColumnComment("用户组别")
     private Long group;
 }

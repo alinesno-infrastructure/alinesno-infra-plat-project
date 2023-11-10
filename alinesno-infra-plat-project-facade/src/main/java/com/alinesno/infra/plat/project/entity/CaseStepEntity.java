@@ -1,5 +1,7 @@
 package com.alinesno.infra.plat.project.entity;
 
+import com.gitee.sunchenbin.mybatis.actable.annotation.ColumnComment;
+import com.gitee.sunchenbin.mybatis.actable.annotation.ColumnType;
 import com.alinesno.infra.common.facade.mapper.entity.BaseEntity;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.annotation.TableField;
@@ -16,14 +18,22 @@ import lombok.EqualsAndHashCode;
 public class CaseStepEntity extends BaseEntity {
 
     @TableField("case_id")
-    private Long caseId ;
+	@ColumnType(length= 50)
+	@ColumnComment("案例编号")
+    private Long caseId;
 
     @TableField("version")
+	@ColumnType(length= 10)
+	@ColumnComment("版本")
     private Integer version;
 
     @TableField("desc")
+	@ColumnType(length=255)
+	@ColumnComment("描述")
     private String desc;
 
     @TableField("expect")
+	@ColumnType(length= 255)
+	@ColumnComment("期望、预期")
     private String expect;
 }
